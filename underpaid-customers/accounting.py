@@ -41,6 +41,9 @@ def parse_customer_orders(customer_order_file, melon_cost):
     customer_melons = float(order[2])
     customer_paid = float(order[3])
 
+    
+    customer_full_name = customer_name.split(' ')
+    customer_first_name = customer_full_name[0]
 
 
     customer_expected = (customer_melons) * melon_cost
@@ -49,7 +52,7 @@ def parse_customer_orders(customer_order_file, melon_cost):
       print(f"Customer #{customer_number}, {customer_name}",
             f"paid ${customer_paid:.2f}, expected",
             f"${customer_expected:.2f}")
-      
+
 
 
 
