@@ -41,7 +41,7 @@ def parse_customer_orders(customer_order_file, melon_cost):
     customer_melons = float(order[2])
     customer_paid = float(order[3])
 
-    
+
     customer_full_name = customer_name.split(' ')
     customer_first_name = customer_full_name[0]
 
@@ -53,6 +53,13 @@ def parse_customer_orders(customer_order_file, melon_cost):
             f"paid ${customer_paid:.2f}, expected",
             f"${customer_expected:.2f}")
 
+    if customer_expected > customer_paid:
+      under_difference = customer_expected - customer_paid
+      print(f"{customer_first_name} underpaid by ${under_difference:.2f}")
+
+    elif customer_expected < customer_paid:
+      over_difference = customer_paid - customer_expected
+      print(f"{customer_first_name} overpaid by ${over_difference:.2f}")
 
 
 
