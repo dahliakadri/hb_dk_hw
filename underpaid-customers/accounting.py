@@ -1,6 +1,6 @@
 STANDARD_MELON_COST = 1.00
 
-def parse_customer_orders(customer_order_file, melon_cost):
+def parse_customer_orders(customer_order_file, melon_cost = STANDARD_MELON_COST):
   """Takes in text file of customer orders and determines which customers have under and overpaid  """
   
   print("List of customers that over or underpaid:")
@@ -38,7 +38,7 @@ def parse_customer_orders(customer_order_file, melon_cost):
 
   customer_order_data.close()
 
-parse_customer_orders("customer-orders.txt", melon_cost = STANDARD_MELON_COST)
+parse_customer_orders("customer-orders.txt")
 
 
 
