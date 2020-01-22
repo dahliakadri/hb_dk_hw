@@ -15,3 +15,17 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 target = 17
 
 print(twoSum(nums, target))
+
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        nums_dict = {}
+        for num in nums:
+            if nums_dict.get(num) == None:
+                nums_dict[num] = num
+            else:
+                return True
+        return False
