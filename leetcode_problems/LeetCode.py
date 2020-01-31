@@ -29,3 +29,24 @@ class Solution(object):
             else:
                 return True
         return False
+
+
+defclass Solution(object):
+    def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        given a list of numbers rotate the first number right and the last number 
+        to the front of the list, continue this one by one for k amount of times
+
+        index zero and move it to index 1 then i take the last index and move it
+        to index zero . i repeat this k times
+
+
+        while k > 0:
+            nums[1] = nums[0]
+            nums[0] = nums[-1]
+            nums.pop()
+            k = k -1
