@@ -129,3 +129,83 @@ berry_node.next = cherry_node
 cherry_node.next = rasberry_node
 
 reverseList(apple_node)
+
+
+#test for one edit
+word_one = "tesat"
+word_two = "tesats"
+
+word_three = "asta"
+word_four = "ask"
+
+word_five = "sets"
+word_six = "test"
+
+def one_edit(word_one, word_two):
+    test_set = {word_one, word_two}
+    #if words are same then auto return false
+    if len(test_set) == 1:
+        return False
+    len_word_one = len(word_one)
+    len_word_two = len(word_two)
+    difference = abs(len_word_one - len_word_two)
+    #if words are different than more than 1 character in length auto return false
+    if difference > 1:
+        return False
+    else:
+    #going to loop through each word and check if each letter at the same index is the same. if it is not then I add a count to the edit count. As soon as it goes above 1 then I return false. If I have one at the end then I return true. 
+        if len_word_one == len_word_two:
+            edit_count = 0
+            i = 0
+            for letter in word_one:
+                if edit_count > 1:
+                    return False 
+                if letter != word_two[i]:
+                    edit_count += 1
+                i += 1
+            return True
+
+        elif len_word_one > len_word_two:
+            edit_count = 0
+            i = 0
+            for letter in word_one:
+                if i <= (len_word_two - 1):
+                    if edit_count > 1:
+                        return False 
+                    if letter != word_two[i]:
+                        edit_count += 1
+                else:
+                    edit_count += 1
+                    if edit_count > 1:
+                        return False
+                    else:
+                        return True
+                i += 1
+            return True
+
+        elif len_word_one < len_word_two:
+            edit_count = 0
+            i = 0
+            for letter in word_two:
+                if i <= (len_word_one - 1):
+                    if edit_count > 1:
+                        return False
+                    if letter != word_one[i]:
+                        edit_count += 1
+                else:
+                    edit_count += 1
+                    if edit_count > 1:
+                        return False
+                    else:
+                        return True
+                i += 1
+        
+            return True
+
+
+
+print(one_edit(word_one, word_two))
+print(one_edit(word_three, word_four))
+print(one_edit(word_five, word_six))
+
+print(one_edit("ask", "asta"))
