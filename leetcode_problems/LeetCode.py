@@ -209,3 +209,44 @@ print(one_edit(word_three, word_four))
 print(one_edit(word_five, word_six))
 
 print(one_edit("ask", "asta"))
+
+
+# https://docs.google.com/presentation/d/1Q14p7QWASSt2H3iWjE-eM5zjqr4sv5uAxT7SUVPZ6AU/edit?usp=sharing
+ 
+# Write a function to find the rectangular intersection of two given rectangles.
+ 
+# As with the example in the Google sheet above, rectangles are always "straight" and never "diagonal" (their edges will always be perpendicular to the axes)
+ 
+# A rectangle will be represented as follows
+ 
+# rectangle = {
+#    # Coordinates of bottom-left corner
+#    'left_x'   : 1,
+#    'bottom_y' : 1,
+ 
+#    # Width and height
+#    'width'    : 6,
+#    'height'   : 3,
+ 
+# }
+ 
+# Your output/result rectangle should be of this format also.
+
+
+# def rectangle intersection(rectangle1, rectangle2):
+# range1_start = rectangle1[left_x]
+# range1_end = rectangle1[width] + rectangle1[left_x]
+# list_x_coordinates = range(range1_start, (rangle1_end + 1))
+ 
+# range1y_start = rectangle1[‘bottom_y’]
+# range1y_end = rectangle1[‘height’] + rectangle1[‘bottom_y’]
+# list_y_coordinates = range(range1y_start, (range1y_end +1))
+ 
+# tuple_list = []
+# for x in list_x_coordinates:
+#     for y in list_y_coordinates:
+#         tuple_list.append((x,y))
+    
+# #do the same thing for rectangle 2
+ 
+# #compare the 
