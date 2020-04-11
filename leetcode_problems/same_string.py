@@ -5,11 +5,16 @@ def same_strings(s, t):
 	t = list(t)
 	for index, letter in enumerate(s):
 		if letter == "#":
-			s = s.pop(index-1)
+			print(index-1)
+			print(s.pop(index-1))
+			print(s.pop(index-1))
+			print(s)
 
 	for index, letter in enumerate(t):
 		if letter == "#":
-			t = t.pop(index-1)
+			t.pop(index-1)
+			t.pop(index-1)
+
 	if s == t:
 		return True
 	else:
@@ -17,5 +22,17 @@ def same_strings(s, t):
 
 s = "ab#c"
 t = "ad#c"
+a = 'ab##'
+b = 'c#d#'
+c = 'a##c'
+d = '#a#c'
+e = 'a#c'
+f = 'b'
 
 print(same_strings(s,t))
+
+print(same_strings(a,b))
+
+print(same_strings(c,d))
+
+print(same_strings(e,f))
