@@ -5,10 +5,8 @@ def same_strings(s, t):
 	t = list(t)
 	for index, letter in enumerate(s):
 		if letter == "#":
-			print(index-1)
-			print(s.pop(index-1))
-			print(s.pop(index-1))
-			print(s)
+			s.pop(index-1)
+			s.pop(index-1)
 
 	for index, letter in enumerate(t):
 		if letter == "#":
