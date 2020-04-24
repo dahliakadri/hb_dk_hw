@@ -18,6 +18,10 @@ def coin_machine(cents):
 		if cents % b  == 0:
 			x = (cents / b)
 			y, z = 0, 0
+#TODO while loop and recursion
+#email or phone 
+#and recursion 
+
 #else  take remainder of w and check % b
 
 

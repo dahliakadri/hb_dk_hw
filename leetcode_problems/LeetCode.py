@@ -250,3 +250,34 @@ print(one_edit("ask", "asta"))
 # #do the same thing for rectangle 2
  
 # #compare the 
+
+# class DahliaTest(Endpoint):
+#     """this end point is small test"""
+#     auth = False
+#     methods = ['GET']
+
+#     class Input(fields.Schema):
+#         pass
+
+#     class Output(fields.Schema):
+#         test_data = fields.String('Return String')
+
+#     def run(self):
+#         payload = {'page': '1'}
+#         res = requests.get('https://reqres.in/api/users', params=payload)
+#         data_res = res.json()
+#         user_data = data_res['data']
+#         print(user_data)
+#         list_of_users = []
+#         for user in user_data:
+#             userId = user.get('id')
+#             email = user.get('email')
+#             firstName = user.get('first_name')
+#             lastName = user.get('last_name')
+#             avatar = user.get('avatar')
+#             user_string = "User ID: {}, Email: {}, First Name: {}, Last Name: {}, Avatar: {}".format(userId, email, firstName, lastName, avatar)
+#             list_of_users.append(user_string)
+
+#         return {
+#         'test_data': list_of_users
+#         }
